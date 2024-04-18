@@ -1,20 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
+* {
+    padding        : 0;
+    margin         : 0;
+    box-sizing     : border-box;
+    list-style     : none;
     text-decoration: none;
 }
 
-:root{
- --Dark-Gray: hsl(0, 0%, 63%);
---Black: hsl(0, 0%, 0%);
---White: hsl(0, 0%, 100%);
---Very-Dark-Gray: hsl(0, 0%, 27%);
+:root {
+    --dark-gray     : hsl(0, 0%, 63%);
+    --black         : hsl(0, 0%, 0%);
+    --white         : hsl(0, 0%, 100%);
+    --very-dark-gray: hsl(0, 0%, 27%);
 }
 
-body{
+body {
     font-family: 'League Spartan', sans-serif;
+}
+
+.main {
+    display              : grid;
+    max-width            : 1440px;
+    margin               : 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows   : repeat(5, max-content);
+    grid-template-areas  :
+        "main"
+        "cta"
+        "image1"
+        " about"
+        "image2";
+}
+
+.container {
+    width   : 90%;
+    margin  : 0 auto;
+    overflow: hidden;
+    padding : 60px 0;
+}
+
+.main-hero{
+    grid-area: main;
+    background: url(../images/desktop-image-hero-1.jpg) no-repeat center center/cover;
+    min-height: 550px;
+}
+
+.main-nav{
+    display: flex;
+}
+
+.main-links{
+    display: none;
+}
+
+.main-logo{
+    margin: 0 auto;
+}
+
+.main-controls{
+    grid-area: main;
+    align-self: end;
+    justify-self: end;
+    background-color: var(--black);
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-control{
+    height: 40%;
 }
