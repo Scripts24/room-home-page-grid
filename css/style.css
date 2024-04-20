@@ -40,88 +40,135 @@ body {
     padding : 60px 0;
 }
 
-.main-hero{
-    grid-area: main;
+.main-hero {
+    grid-area : main;
     background: url(../images/desktop-image-hero-1.jpg) no-repeat center center/cover;
     min-height: 500px;
 }
 
-.main-nav{
+.main-nav {
     display: flex;
 }
 
-.main-links{
+.main-links {
     display: none;
 }
 
-.main-logo{
+.main-logo {
     margin: 0 auto;
 }
 
-.main-controls{
-    grid-area: main;
-    align-self: end;
-    justify-self: end;
+.main-controls {
+    grid-area       : main;
+    align-self      : end;
+    justify-self    : end;
     background-color: var(--black);
-    width: 100px;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    width           : 100px;
+    height          : 50px;
+    display         : flex;
+    justify-content : space-around;
+    align-items     : center;
 }
 
-.main-control{
+.main-control {
     height: 40%;
 }
 
-.main-content{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+.main-content {
+    width          : 100%;
+    height         : 100%;
+    display        : flex;
+    flex-direction : column;
     justify-content: center;
-    align-items: flex-start;
+    align-items    : flex-start;
 }
 
-.main-buy{
+.main-buy {
     grid-area: cta;
 }
 
-.main-title{
+.main-title {
     color: var(--black);
 }
 
-.main-paragraph{
-    color: var(--dark-gray);
+.main-paragraph {
+    color      : var(--dark-gray);
     line-height: 1.5em;
-    margin: 1em 0 2em;
+    margin     : 1em 0 2em;
 }
 
-.main-paragraph-about{
+.main-paragraph-about {
     margin: 1em 0 0 0;
 }
 
-.main-cta{
-    color: var(--very-dark-gray);
+.main-cta {
+    color         : var(--very-dark-gray);
     text-transform: uppercase;
 }
 
-.main-arrow{
+.main-arrow {
     margin-left: 1.2em;
 }
 
-.main-bg{
-    grid-area: image1;
+.main-bg {
+    grid-area : image1;
     min-height: 250px;
-    height: 100%;
+    height    : 100%;
     background: url(../images/image-about-dark.jpg) no-repeat center center/cover;
 }
 
-.main-about{
+.main-about {
     grid-area: about;
 }
 
-.main-bg-second{
-    grid-area: image2;
+.main-bg-second {
+    grid-area : image2;
     background: url(../images/image-about-light.jpg) no-repeat center center/cover;
+}
+
+
+/** MEDIA QUERIES */
+
+@media (min-width: 768px) {
+    .container {
+        width  : 85%;
+        padding: 70px 0;
+    }
+
+    .main {
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-areas  :
+            "main main main main cta cta cta"
+            "main main main main cta cta cta"
+            "main main main main cta cta cta"
+            "image1 image1 about about about image2 image2"
+            "image1 image1 about about about image2 image2";
+
+    }
+
+    .main-controls {
+        grid-area   : cta;
+        justify-self: start;
+    }
+
+    .main-hamburguer {
+        display: none;
+    }
+
+    .main-logo {
+        margin: 0;
+    }
+
+    .main-links {
+        padding       : 0;
+        display       : grid;
+        grid-auto-flow: column;
+        gap           : 1em;
+        margin-left   : 10%;
+    }
+
+    .main-link {
+        color: var(--white);
+    }
+
 }
