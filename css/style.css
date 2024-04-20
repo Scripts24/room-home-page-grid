@@ -43,7 +43,7 @@ body {
 .main-hero{
     grid-area: main;
     background: url(../images/desktop-image-hero-1.jpg) no-repeat center center/cover;
-    min-height: 550px;
+    min-height: 500px;
 }
 
 .main-nav{
@@ -97,6 +97,10 @@ body {
     margin: 1em 0 2em;
 }
 
+.main-paragraph-about{
+    margin: 1em 0 0 0;
+}
+
 .main-cta{
     color: var(--very-dark-gray);
     text-transform: uppercase;
@@ -111,4 +115,13 @@ body {
     min-height: 250px;
     height: 100%;
     background: url(../images/image-about-dark.jpg) no-repeat center center/cover;
+}
+
+.main-about{
+    grid-area: about;
+}
+
+.main-bg-second{
+    grid-area: image2;
+    background: url(../images/image-about-light.jpg) no-repeat center center/cover;
 }
